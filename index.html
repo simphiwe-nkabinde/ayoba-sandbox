@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .bg-blue-grad {
+            background: linear-gradient(97.5deg, #3089cc 0%, #0067a3 55.17%);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="p-2 d-flex align-items-center bg-blue-grad shadow-sm mb-3">
+        <img src="images/sandbox-icon.webp" class="border rounded" width="40" height="40" alt="">
+        <h1 class="ms-2 mb-0 text-light display-5">Dev Sandbox</h1>
+    </header>
+    <main class="container">
+        <h1 class="display-6 text-center text-light-emphasis mb-3">Ayoba Development Sandbox</h1>
+        <h2>Running your Microapp</h2>
+        <ul class="small">
+            <li>Connect your android phone and computer to the same network</li>
+            <li>In the Ayoba(PRE) apk open the Ayoba
+                <img width="20" class="ms-2" src="images/sandbox-icon.webp" alt="">Sandbox app
+            </li>
+            <li>Below, enter the url address of your locally hosted app using your computers IP address as the hostname.
+                <br>
+                eg. http://<span class="text-info">10.0.1.255</span>:3000/index.html
+            </li>
+        </ul>
+        <div class="mb-3 text-center">
+            <input id="url-input" type="text" class="form-control mb-3">
+            <button type="button" onclick="openMicroApp(event)" class="btn btn-success">Go</button>
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script>
+        function openMicroApp(event) {
+            const urlInput = document.querySelector('#url-input')
+            if (urlInput.value) {
+                window.location = urlInput.value
+            }
+        }
+    </script>
+</body>
+
+</html>
